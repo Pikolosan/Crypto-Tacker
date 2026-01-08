@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  * @author     Your Name <email@example.com>
  */
-class Parth_Crypto_Tracker {
+class Fast_Crypto_Tracker {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Parth_Crypto_Tracker {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Parth_Crypto_Tracker_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Fast_Crypto_Tracker_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,9 +44,9 @@ class Parth_Crypto_Tracker {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $Parth_Crypto_Tracker    The string used to uniquely identify this plugin.
+	 * @var      string    $Fast_Crypto_Tracker    The string used to uniquely identify this plugin.
 	 */
-	protected $Parth_Crypto_Tracker;
+	protected $Fast_Crypto_Tracker;
 
 	/**
 	 * The current version of the plugin.
@@ -67,12 +67,12 @@ class Parth_Crypto_Tracker {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'Parth_Crypto_Tracker_VERSION' ) ) {
-			$this->version = Parth_Crypto_Tracker_VERSION;
+		if ( defined( 'Fast_Crypto_Tracker_VERSION' ) ) {
+			$this->version = Fast_Crypto_Tracker_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->Parth_Crypto_Tracker = 'parth-crypto-tracker';
+		$this->Fast_Crypto_Tracker = 'fast-crypto-tracker';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Parth_Crypto_Tracker {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Parth_Crypto_Tracker_Loader. Orchestrates the hooks of the plugin.
-	 * - Parth_Crypto_Tracker_i18n. Defines internationalization functionality.
-	 * - Parth_Crypto_Tracker_Admin. Defines all hooks for the admin area.
-	 * - Parth_Crypto_Tracker_Public. Defines all hooks for the public side of the site.
+	 * - Fast_Crypto_Tracker_Loader. Orchestrates the hooks of the plugin.
+	 * - Fast_Crypto_Tracker_i18n. Defines internationalization functionality.
+	 * - Fast_Crypto_Tracker_Admin. Defines all hooks for the admin area.
+	 * - Fast_Crypto_Tracker_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Parth_Crypto_Tracker {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-parth-crypto-tracker-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-fast-crypto-tracker-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-parth-crypto-tracker-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-fast-crypto-tracker-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-parth-crypto-tracker-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-fast-crypto-tracker-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-parth-crypto-tracker-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-fast-crypto-tracker-public.php';
 
-		$this->loader = new Parth_Crypto_Tracker_Loader();
+		$this->loader = new Fast_Crypto_Tracker_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Parth_Crypto_Tracker_i18n class in order to set the domain and to register the hook
+	 * Uses the Fast_Crypto_Tracker_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Parth_Crypto_Tracker {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Parth_Crypto_Tracker_i18n();
+		$plugin_i18n = new Fast_Crypto_Tracker_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Parth_Crypto_Tracker {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Parth_Crypto_Tracker_Admin( $this->get_Parth_Crypto_Tracker(), $this->get_version() );
+		$plugin_admin = new Fast_Crypto_Tracker_Admin( $this->get_Fast_Crypto_Tracker(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +168,7 @@ class Parth_Crypto_Tracker {
      */
     private function define_public_hooks() {
 
-        $plugin_public = new Parth_Crypto_Tracker_Public( $this->get_Parth_Crypto_Tracker(), $this->get_version() );
+        $plugin_public = new Fast_Crypto_Tracker_Public( $this->get_Fast_Crypto_Tracker(), $this->get_version() );
 
         $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
         $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -195,15 +195,15 @@ class Parth_Crypto_Tracker {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_Parth_Crypto_Tracker() {
-		return $this->Parth_Crypto_Tracker;
+	public function get_Fast_Crypto_Tracker() {
+		return $this->Fast_Crypto_Tracker;
 	}
 
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Parth_Crypto_Tracker_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Fast_Crypto_Tracker_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

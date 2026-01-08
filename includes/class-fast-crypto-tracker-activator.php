@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  * @author     Your Name <email@example.com>
  */
-class Parth_Crypto_Tracker_Activator {
+class Fast_Crypto_Tracker_Activator {
 
 	/**
 	 * Short Description. (use period)

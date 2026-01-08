@@ -3,26 +3,26 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/public
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/public
  */
 
-class Parth_Crypto_Tracker_Public {
+class Fast_Crypto_Tracker_Public {
 
-    private $Parth_Crypto_Tracker;
+    private $Fast_Crypto_Tracker;
     private $version;
 
-    public function __construct( $Parth_Crypto_Tracker, $version ) {
-        $this->Parth_Crypto_Tracker = $Parth_Crypto_Tracker;
+    public function __construct( $Fast_Crypto_Tracker, $version ) {
+        $this->Fast_Crypto_Tracker = $Fast_Crypto_Tracker;
         $this->version = $version;
     }
 
     public function enqueue_styles() {
-        wp_enqueue_style( $this->Parth_Crypto_Tracker, plugin_dir_url( __FILE__ ) . 'css/parth-crypto-tracker-public.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->Fast_Crypto_Tracker, plugin_dir_url( __FILE__ ) . 'css/fast-crypto-tracker-public.css', array(), $this->version, 'all' );
     }
 
     public function enqueue_scripts() {
-        wp_enqueue_script( $this->Parth_Crypto_Tracker, plugin_dir_url( __FILE__ ) . 'js/parth-crypto-tracker-public.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->Fast_Crypto_Tracker, plugin_dir_url( __FILE__ ) . 'js/fast-crypto-tracker-public.js', array( 'jquery' ), $this->version, false );
     }
 
     /**
@@ -53,7 +53,7 @@ class Parth_Crypto_Tracker_Public {
         );
 
         // 3. Fetch Price Logic (Same caching engine as before)
-        $cache_key = 'parth_crypto_' . $selected_coin . '_' . $selected_curr;
+        $cache_key = 'fast_crypto_' . $selected_coin . '_' . $selected_curr;
         $price     = get_transient( $cache_key );
         $display_price = '';
 

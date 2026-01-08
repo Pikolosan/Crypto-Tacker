@@ -3,11 +3,11 @@
 /**
  * Register all actions, filters, and shortcodes for the plugin
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  */
 
-class Parth_Crypto_Tracker_Loader {
+class Fast_Crypto_Tracker_Loader {
 
     protected $actions;
     protected $filters;

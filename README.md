@@ -1,4 +1,4 @@
-# Crypto Tracker 🚀
+# Fast Crypto Tracker 🚀
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![WordPress](https://img.shields.io/badge/WordPress-Tested_6.4-success.svg) ![PHP](https://img.shields.io/badge/PHP-7.4+-777bb4.svg)
 
@@ -32,7 +32,7 @@ As a developer coming from a MERN background, I treated this WordPress plugin li
 The project follows the **WordPress Plugin Boilerplate (WPPB)** standard to ensure separation of concerns:
 
 ```text
-parth-crypto-tracker/
+fast-crypto-tracker/
 ├── admin/                   # Backend Admin UI logic
 ├── includes/                # Core Logic (Loader, i18n, Activator)
 │   ├── class-loader.php     # Registers Hooks & Shortcodes
@@ -40,7 +40,7 @@ parth-crypto-tracker/
 ├── public/                  # Frontend Display Logic
 │   ├── class-public.php     # API Fetching & Caching Implementation
 │   └── ...
-└── parth-crypto-tracker.php # Main Bootstrap File
+└── fast-crypto-tracker.php # Main Bootstrap File
 ```
 ## 🛠 Features
 
@@ -53,11 +53,11 @@ parth-crypto-tracker/
 ## 💻 Code Highlight
 Here is the core logic responsible for the Fetch & Cache strategy
 
-(public/class-parth-crypto-tracker-public.php):
+(public/class-fast-crypto-tracker-public.php):
 ```php
 public function get_crypto_price_shortcode( $atts ) {
     // 1. Check Cache (Transient)
-    $price = get_transient( 'parth_btc_price' );
+    $price = get_transient( 'fast_btc_price' );
 
     if ( false === $price ) {
         // 2. Fetch from API if cache is empty
@@ -74,7 +74,7 @@ public function get_crypto_price_shortcode( $atts ) {
         $price = $data['bitcoin']['usd'];
 
         // 3. Set Cache for 1 Hour (3600 seconds)
-        set_transient( 'parth_btc_price', $price, 3600 );
+        set_transient( 'fast_btc_price', $price, 3600 );
     }
 
     // 4. Return Sanitized Output
@@ -86,6 +86,6 @@ public function get_crypto_price_shortcode( $atts ) {
 
 1. Go to WordPress Admin > Plugins > Add New > Upload Plugin.
 
-1. Upload and Activate Parth Crypto Tracker.
+1. Upload and Activate Fast Crypto Tracker.
 
 1. Add [crypto_price] to any Page or Post.  

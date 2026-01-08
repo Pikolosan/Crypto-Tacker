@@ -8,8 +8,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/admin/partials
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/admin/partials
  */
 ?>
 

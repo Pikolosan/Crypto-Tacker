@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Parth_Crypto_Tracker
- * @subpackage Parth_Crypto_Tracker/includes
+ * @package    Fast_Crypto_Tracker
+ * @subpackage Fast_Crypto_Tracker/includes
  * @author     Your Name <email@example.com>
  */
-class Parth_Crypto_Tracker_i18n {
+class Fast_Crypto_Tracker_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Parth_Crypto_Tracker_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'parth-crypto-tracker',
+			'fast-crypto-tracker',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
