@@ -1,4 +1,4 @@
-# Parth Crypto Tracker 🚀
+# Crypto Tracker 🚀
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![WordPress](https://img.shields.io/badge/WordPress-Tested_6.4-success.svg) ![PHP](https://img.shields.io/badge/PHP-7.4+-777bb4.svg)
 
